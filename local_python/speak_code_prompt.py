@@ -6,6 +6,13 @@ import os
 import re
 import subprocess
 
+'''
+This program allows the user to use either text input or speech input to generate a ROS python program using an OpenAI text completion model.
+It draws on primitives from the primitives directory and stores the generated code in the responses directory.
+Currently it will not run ROS unless you have ROS locally but also doesnt work well to begin with. However, it will prompt you if you want to run the program.
+'''
+
+
 client = OpenAI(api_key=api_key)
 
 # Audio Recording Settings

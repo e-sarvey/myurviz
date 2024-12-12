@@ -7,6 +7,15 @@ import sys
 import select
 import termios
 
+'''
+This class was developed to simplify use of OpenAI whisper model (speech to text).
+Methods:
+    record_audio -> starts to record a message when user hits enter and stops on second enter press.
+    split_audio_if_needed -> segments audio into chunks for transcription based on the size of the files (whisper has a size limit)
+    transcribe_audio_chunks -> provides a transcription for a series of audio file chunks
+    confirm_transcription -> method to display the full transcription and have user verify in the terminal  
+'''
+
 class Speech2Text:
     def __init__(self, client, prompt=None, sample_rate=44100, channels=1, max_file_size_mb=25):
         self.client = client
