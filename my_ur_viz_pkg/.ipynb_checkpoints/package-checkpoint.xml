@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>my_ur_viz_pkg</name>
+  <version>0.0.0</version>
+  <description>Simulated UR arm with MQTT control for ROS2</description>
+  <maintainer email="elijah.sarvey@tufts.edu">jupyter-esarvey</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build tool -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Dependencies required to build and run the package -->
+  <build_depend>ament_cmake_python</build_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>control_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>paho-mqtt</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <!-- Testing dependencies -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
